@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>21880291</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/21880291.css">
+</head>
+
+<body>
+  <header>
+    <div class="py-5 text-center">
+      <h6 class="text-orange">BAI THI CUOI KY MON LAP TRINH WEB 1</h6>
+      <h1 class="text-white">DTTX - HK2/2019-2020</h1>
+    </div>
+    <nav class="bg-brown container-fluid py-3" id="menu">
+      <ul class="nav justify-content-center ">
+          <li class="nav-item">
+              <a class="nav-link" href="index.html" aria-current="page">Cau 1</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="cau2.html">cau 2</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link active" href="cau3.html">Cau 3</a>
+          </li>
+      </ul>
+    </nav>
+  </header>
+  <main id="view" class="py-5">
+
+  </main>
+  <footer class="container-fluid bg-brown py-5 text-center">
+    Copyright &copy; by 21880291 - TRUONG TRUNG DUC
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js" integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="vendor/data.js"></script>
+
+  <script id="template" type="text/x-handlebars-template">
+    {{#each data}}
+    {{#if isLeft}}
+    <div class="container text-center py-5 position-relative">
+      <img src="{{imagepath}}" alt="">
+      <div class="bg-box text-start p-5 w-50 box-left">
+        <h6>{{{title}}}</h6>
+        <h1>{{slogan}}</h1>
+      </div>
+    </div>
+    {{else}}
+    <div class="container text-center py-5 position-relative">
+     <img src="{{imagepath}}" alt="">
+      <div class="bg-box text-start p-5 w-50 box-right">
+        <h6>{{{title}}}</h6>
+        <h1>{{slogan}}</h1>
+      </div> 
+    </div>
+    {{/if}}
+    {{/each}}
+  </script>
+
+  <script>
+    let jsonData = {
+      data: getData()
+    };
+    jsonData.data.forEach((item, index)=> {
+      /* item.isRight = (index + 1) % 2;  */
+      item.isLeft = index % 2;
+    })
+
+    let source = document.getElementById('template').innerHTML;
+    let template = Handlebars.compile(source);
+    let html = template(jsonData);
+    document.getElementById('view').innerHTML = html;
+  </script>
+</body>
+
+</html>

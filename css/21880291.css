@@ -1,5 +1,5 @@
 :root {
-  --w1-brown:rgba(47, 23, 15, 0.9)
+  --w1-brown:rgba(47, 23, 15, 0.9);
   --w1-orange: #E6A756;
 }
 
@@ -8,69 +8,61 @@ body {
     background: url('../img/bg.jpg');
   }
   
-  header {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  
-  #header h1 {
-    font-size: 60px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    color: white;
-  }
-
-  #header h3 {
-    color: #E6A756;
-  }
-  
-  nav {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 30px;
-  }
-  
-  .container {
-    margin-top: 20px;
-  }
-  
-  .cover-image {
-  object-fit: cover;        
-  }
-
-  .image-container {
-    position: relative;
+.bg-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: black;
 }
 
-.thongtin {
-    position: absolute;
-    top: 110px;
-    left: 350px; 
-    width: 500px;
-    height: 350px;
-    background: rgba(255, 255, 255, 0.85);
-    padding: 30px;
-    z-index: 1;
+.text-orange {
+  color: var(--w1-orange);
 }
 
-  .row {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .col-md-6 {
-    width: 50%;
-  }
-  
-  img {
-    width: 100%;
-    height: auto;
-  }
-  
-  footer {
-    padding: 30px;
-    background-color: rgb(47, 23, 15, 0.9);
-    color: #ffffff;
-    justify-items: center;
-  }
-  
+.bg-brown {
+  background-color: var(--w1-brown);
+  color: white;
+}
+
+.bg-orange {
+  background-color: var(--w1-orange);
+  color: white;
+}
+
+#menu a {
+  color: white;
+  font-weight: bold;
+}
+
+#menu a.active {
+  color: var(--w1-orange);
+}
+
+/* cau 1 */
+#intro div {
+  position: absolute;
+  top: 4rem;
+}
+
+#about div {
+  position: relative;
+  top: -4rem;
+  left: 12.5%;
+}
+
+/* cau 2 */
+form {
+  border-style: double;
+  border-width: 1rem;
+  border-color: var(--w1-orange);
+}
+
+/* cau 3 */
+.box-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.box-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
