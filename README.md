@@ -94,3 +94,17 @@ class liên quan đến form và button trong Bootstrap 5:
 7. `btn-group`: Nhóm các nút lại với nhau để tạo ra một nhóm nút.
 8. `btn-toolbar`: Nhóm các `btn-group` lại với nhau để tạo thanh công cụ đa nút.
 9. `btn-close`: Tạo nút đóng (close button) thường được sử dụng trong các hộp thoại (modals).
+
+Hệ thống lưới Bootstrap 5:
+
+1. **12 cột cơ sở**: Hệ thống lưới của Bootstrap 5 dựa trên 12 cột, cho phép bạn chia layout trang web thành 12 phần bằng cách sử dụng các lớp `col-*`. Điều này giúp bạn dễ dàng tạo ra các bố trí phức tạp và linh hoạt.
+
+2. **`row` và `col`**: Để sử dụng hệ thống lưới, bạn bắt đầu bằng việc đặt các phần tử trong một `row`, sau đó sử dụng lớp `col-*` để xác định kích thước và bố trí của các cột bên trong hàng.
+
+3. **Phản ứng**: Hệ thống lưới Bootstrap 5 được thiết kế để phản ứng, tức là nó có thể thích nghi với kích thước màn hình khác nhau. Điều này giúp đảm bảo rằng giao diện của bạn sẽ hiển thị đẹp trên cả máy tính và thiết bị di động.
+
+4. **Lớp `container` và `container-fluid`**: Bootstrap 5 cung cấp hai lớp để đóng gói nội dung - `container` và `container-fluid`. `container` tạo ra một bố cục cố định với kích thước tương đối, trong khi `container-fluid` sẽ chiếm toàn bộ chiều rộng của container cha.
+
+5. **Lớp liên quan khác**: Bootstrap 5 cung cấp nhiều lớp liên quan khác để tùy chỉnh giao diện như `offset-*` để tạo khoảng cách, `order-*` để sắp xếp lại thứ tự của cột, và các lớp `push` và `pull` để điều chỉnh vị trí của cột.
+
+Hệ thống lưới Bootstrap 5 là một công cụ mạnh mẽ giúp bạn xây dựng giao diện trang web đáp ứng và có cấu trúc một cách nhanh chóng và hiệu quả.
